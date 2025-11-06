@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pet Grooming — Grooming Kucing Kroya, Cilacap</title>
+  <meta name="description" content="Pet Grooming | Grooming Kucing terjangkau, fleksibel & tanpa ribet. Layanan panggilan & antar-jemput di Kroya - Cilacap." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --brand:#A9E1FF;    /* biru muda */
+      --accent:#3AA0D8;   /* biru sedikit gelap */
+      --muted:#6B7280;
+      --card:#F7FAFF;
+      --radius:14px;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Container */
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 480px;
+      gap:28px;
+      align-items:center;
+      padding:48px 28px;
+      background:linear-gradient(180deg, rgba(169,225,255,0.12), rgba(255,255,255,0.0));
+      border-radius:18px;
+    }
+    .hero-left h1{
+      font-size:34px;
+      margin:0 0 12px 0;
+      letter-spacing:-0.2px;
+      line-height:1.05;
+    }
+    .tagline{color:var(--accent);font-weight:700;margin-bottom:8px}
+    .hero p.lead{margin:0 0 18px 0;color:var(--muted)}
+    .benefits{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .benefit{
+      background:var(--card);padding:10px 12px;border-radius:12px;font-weight:600;color:#0f172a;
+      display:inline-flex;align-items:center;gap:8px;font-size:14px;
+    }
+    .cta-row{display:flex;gap:12px;align-items:center}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      background:var(--accent);color:white;padding:12px 16px;border-radius:12px;border:0;font-weight:700;
+      box-shadow:0 6px 18px rgba(45,113,160,0.12);cursor:pointer;
+      text-decoration:none;
+    }
+    .btn.secondary{background:white;color:var(--accent);border:1px solid rgba(60,110,140,0.08)}
+    .micro{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* Hero right image */
+    .hero-right{display:flex;justify-content:center;align-items:center}
+    .hero-photo{
+      width:100%;max-width:420px;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(10,30,60,0.08);
+      border:6px solid rgba(255,255,255,0.85);
+    }
+    .hero-photo img{width:100%;display:block;height:auto;object-fit:cover}
+
+    /* Sections */
+    section{padding:44px 0}
+    h2{margin:0 0 14px 0;font-size:22px}
+    .subtle{color:var(--muted);margin-bottom:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+
+    .card{
+      background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(8,20,50,0.04);border:1px solid rgba(12,50,80,0.04)
+    }
+
+    .icon-round{width:56px;height:56px;border-radius:12px;background:linear-gradient(180deg,var(--brand),#d7f1ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .service-title{font-weight:700;margin-top:10px;margin-bottom:6px}
+    .muted-sm{color:var(--muted);font-size:14px}
+
+    /* Testimonials */
+    .testi{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .testi .card{display:flex;gap:12px;align-items:flex-start}
+    .avatar{width:56px;height:56px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);box-shadow:0 6px 18px rgba(10,30,60,0.05)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+
+    /* Booking Form */
+    .booking{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+    .form{background:white;padding:18px;border-radius:12px}
+    form label{display:block;font-size:13px;margin-bottom:6px;font-weight:600}
+    input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #e6eef6;background:#fbfeff;font-size:14px}
+    textarea{min-height:100px;resize:vertical}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid rgba(12,50,80,0.04);margin-top:28px}
+    footer .frow{display:flex;justify-content:space-between;gap:12px;align-items:center}
+
+    /* Responsive */
+    @media(max-width:1100px){
+      .hero{grid-template-columns:1fr; padding:28px}
+      .booking{grid-template-columns:1fr}
+      .testi{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:600px){
+      .hero-left h1{font-size:26px}
+      .grid-3{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <!-- HERO -->
+    <header class="hero" role="banner" aria-label="Hero - Pet Grooming">
+      <div class="hero-left">
+        <div class="tagline">Grooming Kucing Terjangkau • Kroya, Cilacap</div>
+        <h1>Grooming Kucing Terjangkau, Fleksibel & Tanpa Ribet 🧼🐾</h1>
+        <p class="lead">Biar si meow tetap wangi, fluffy & happy — tanpa bikin Meowparents keluar rumah atau buang waktu di salon ✨</p>
+
+        <div class="benefits" aria-hidden="true">
+          <div class="benefit">✅ Kucing bersih, wangi & rapi</div>
+          <div class="benefit">✅ Bebas jamur & kutu</div>
+          <div class="benefit">✅ Bulu lembut & nggak gampang rontok</div>
+        </div>
+
+        <div class="cta-row">
+          <!-- Replace data-phone if needed; number here uses international format without + : 6288980533622 -->
+          <a class="btn" href="#" onclick="openWhatsApp()" aria-label="Booking via WhatsApp" id="wa-cta">
+            Booking Grooming Sekarang 🐾
+          </a>
+
+          <a class="btn secondary" href="#services" aria-label="Lihat Layanan">
+            Lihat Paket Grooming
+          </a>
+        </div>
+        <div class="micro">Slot terbatas setiap hari — secure your spot meow! 😽</div>
+      </div>
+
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-photo">
+          <!-- Placeholder image: ganti dengan foto asli grooming kamu -->
+          <img src="https://images.unsplash.com/photo-1559239115-5b7b1d1f3b30?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b0a3f3e6b7f4c8a9b4a9b2d0e4f2c3d" alt="Kucing setelah grooming - Pet Grooming">
+        </div>
+      </div>
+    </header>
+
+    <!-- PROBLEM -->
+    <section id="problems" aria-label="Masalah Meowparents">
+      <div class="wrap">
+        <h2>Kenapa Banyak Meowparents Butuh Grooming? 😿</h2>
+        <p class="subtle">Kami paham kok… niat merawat ada, tapi seringkali waktunya yang nggak ada, atau kucingnya yang takut ke salon. Berikut masalah umum yang sering kami temui:</p>
+
+        <div class="grid-4" role="list">
+          <div class="card" role="listitem">
+            <div class="icon-round">🕒</div>
+            <div class="service-title">Sibuk & susah atur waktu</div>
+            <div class="muted-sm">Pekerjaan & aktivitas bikin sulit bawa kucing ke salon. Kami datang ke rumah.</div>
+          </div>
+
+          <div class="card" role="listitem">
+            <div class="icon-round">💸</div>
+            <div class="service-title">Takut biaya mahal</div>
+            <div class="muted-sm">Harga tidak transparan bikin ragu—kami jelaskan paket & opsi langganan.</div>
+          </div>
+
+          <div class="card" role="listitem">
+            <div class="icon-round">😿</div>
+            <div class="service-title">Kucing stress di salon ramai</div>
+            <div class="muted-sm">Suasana tenang & personal handling meminimalkan stres si meow.</div>
+          </div>
+
+          <div class="card" role="listitem">
+            <div class="icon-round">🦠</div>
+            <div class="service-title">Takut tertular kutu/jamur</div>
+            <div class="muted-sm">Protokol kebersihan & perawatan khusus untuk masalah kulit.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section id="solution" style="background:linear-gradient(180deg, rgba(169,225,255,0.10), rgba(255,255,255,0));border-radius:12px;">
+      <div class="wrap">
+        <h2>Tenang Meowparents, Pet Grooming hadir jadi solusi! ✨</h2>
+        <p class="subtle">Kami bantu kamu merawat si meow tanpa drama & tanpa ribet: layanan fleksibel, ramah di kantong, dan tetap mengutamakan kenyamanan kucing.</p>
+
+        <div class="grid-3" aria-hidden="false">
+          <div class="card" style="text-align:center">
+            <div class="icon-round" style="margin:0 auto">💖</div>
+            <div class="service-title">Kucing lebih wangi & happy</div>
+            <div class="muted-sm">Perawatan lembut yang membuat si meow kinclong & cuddly.</div>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <div class="icon-round" style="margin:0 auto">🛁</div>
+            <div class="service-title">Bebas kutu & jamur</div>
+            <div class="muted-sm">Perawatan anti-kutu/jamur yang aman & teruji.</div>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <div class="icon-round" style="margin:0 auto">✨</div>
+            <div class="service-title">Bulu lembut & rapi</div>
+            <div class="muted-sm">Sisir & treatment yang membuat bulu sehat & tidak mudah rontok.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <a class="btn" href="#" onclick="openWhatsApp()">Booking Grooming Sekarang 🐾</a>
+          <span class="muted-sm" style="margin-left:12px">Atau lihat paket lengkap di bawah ↓</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- next sections placeholder (will be created in Batch 2+) -->
+    <section id="services">
+      <div class="wrap">
+        <h2>Layanan & Paket Grooming</h2>
+        <p class="subtle">Berikut layanan utama yang Pet Grooming tawarkan. (Ganti harga sesuai kebijakan — di sini kami tampilkan opsi panggilan & paket langganan.)</p>
+
+        <div class="grid-3" aria-label="Layanan utama">
+          <div class="card">
+            <div class="icon-round">🧼</div>
+            <div class="service-title">Grooming Standard</div>
+            <div class="muted-sm">Mandi, blow-dry, potong kuku & pembersihan telinga — cocok perawatan rutin.</div>
+          </div>
+
+          <div class="card">
+            <div class="icon-round">✂️</div>
+            <div class="service-title">Grooming Lengkap</div>
+            <div class="muted-sm">Semua dari Standard + treatment khusus untuk bulu & detail finishing.</div>
+          </div>
+
+          <div class="card">
+            <div class="icon-round">🧴</div>
+            <div class="service-title">Add-on: Anti Kutu / Anti Jamur</div>
+            <div class="muted-sm">Perawatan ekstra untuk kasus kutu atau jamur; aman untuk kucing.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <strong>Catatan:</strong> Kucing agresif atau bulu gimbal mungkin dikenai biaya tambahan. Untuk harga lengkap, silakan <a href="#" onclick="openWhatsApp()">hubungi via WhatsApp</a>.
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials & Before/After -->
+    <section id="testimonials">
+      <div class="wrap">
+        <h2>Testimoni Cat Parents</h2>
+        <p class="subtle">Beberapa kata dari pelanggan yang sudah merasakan hasil Pet Grooming.</p>
+
+        <div class="testi">
+          <div class="card">
+            <div class="avatar">MR</div>
+            <div>
+              <strong>Mbak Rani, Kroya</strong>
+              <div class="muted-sm">“Kucingku tadinya bau ikan asin, sekarang wanginya kaya habis mandi parfum bayi! Gemes banget!”</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="avatar">AD</div>
+            <div>
+              <strong>Ayah Dedi, Cilacap</strong>
+              <div class="muted-sm">“Pelayanan ramah, datang tepat waktu. Kucing jadi rapi & bulunya lembut.”</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div style="font-weight:700;margin-bottom:8px">Before / After (Preview)</div>
+          <div class="gallery" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=800&auto=format&fit=crop" alt="Before grooming example 1">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?q=80&w=800&auto=format&fit=crop" alt="After grooming example 1">
+            <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?q=80&w=800&auto=format&fit=crop" alt="Before grooming example 2">
+            <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=800&auto=format&fit=crop" alt="After grooming example 2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <div class="wrap">
+        <h2>Cara Booking (Cepat & Mudah)</h2>
+        <p class="subtle">Pilih cara yang paling nyaman: chat WA, atau isi form singkat di bawah — admin akan WA balik untuk konfirmasi.</p>
+
+        <div class="booking">
+          <div>
+            <h3 style="margin-top:0">Langkah Booking via WhatsApp</h3>
+            <ol class="muted-sm">
+              <li>Klik tombol <strong>Booking Grooming Sekarang 🐾</strong></li>
+              <li>Kirim pesan otomatis: "Halo! Saya ingin booking grooming kucing 🐱✨"</li>
+              <li>Admin konfirmasi slot & lokasi, lalu lakukan pembayaran sesuai instruksi</li>
+            </ol>
+
+            <div style="margin-top:12px">
+              <a class="btn" href="#" onclick="openWhatsApp()">Booking Grooming Sekarang 🐾</a>
+              <div class="note">WA: <strong>088980533622</strong> (Kroya, Cilacap)</div>
+            </div>
+          </div>
+
+          <aside class="form card" aria-label="Form Booking">
+            <strong>Atau isi form singkat</strong>
+            <form id="booking-form" onsubmit="event.preventDefault(); submitDummyForm()">
+              <label for="name">Nama</label>
+              <input id="name" name="name" placeholder="Nama lengkap" required>
+
+              <label for="wh">No. WhatsApp</label>
+              <input id="wh" name="phone" placeholder="08xxxxxxxxxx" required>
+
+              <label for="jenis">Jenis & Ukuran</label>
+              <select id="jenis" name="jenis">
+                <option>Kucing - Kecil</option>
+                <option>Kucing - Sedang</option>
+                <option>Kucing - Besar</option>
+              </select>
+
+              <label for="layanan">Layanan yang diinginkan</label>
+              <select id="layanan" name="layanan">
+                <option>Grooming Standard</option>
+                <option>Grooming Lengkap</option>
+                <option>Add-on: Anti Kutu / Anti Jamur</option>
+              </select>
+
+              <label for="date">Tanggal preferensi</label>
+              <input id="date" name="date" type="date">
+
+              <label for="notes">Catatan (opsional)</label>
+              <textarea id="notes" name="notes" placeholder="Contoh: kucing agresif, alergi, dsb"></textarea>
+
+              <div style="margin-top:10px">
+                <button class="btn" type="submit">Kirim & Konfirmasi via WA</button>
+              </div>
+
+              <div class="note">Admin akan menghubungi via WA untuk konfirmasi. Tidak ada data yang disimpan di demo ini.</div>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrap">
+        <div class="frow">
+          <div>
+            <div style="font-weight:800">Pet Grooming</div>
+            <div class="muted-sm">Jl. Slamet, Kroya, Cilacap • Jam 08:00 - selesai</div>
+          </div>
+
+          <div style="text-align:right">
+            <div class="muted-sm">Kontak</div>
+            <div style="font-weight:700">WhatsApp: 088980533622</div>
+            <div class="muted-sm">Follow: (Instagram belum tersedia)</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // === CONFIG ===
+    // GANTI nomor WA di bawah jika perlu (format internasional tanpa "+")
+    // contoh: 6288980533622 (nomor dari 088980533622 -> +62 889 8053 3622)
+    const WA_PHONE = '6288980533622';
+    const WA_MESSAGE = encodeURIComponent('Halo! Saya ingin booking grooming kucing 🐱✨');
+
+    // Membuka WhatsApp dengan pesan otomatis (untuk desktop & mobile)
+    function openWhatsApp(){
+      const url = 'https://wa.me/' + WA_PHONE + '?text=' + WA_MESSAGE;
+      window.open(url, '_blank');
+    }
+
+    // Dummy form submission: convert to WA message with details
+    function submitDummyForm(){
+      const name = document.getElementById('name').value || '-';
+      const phone = document.getElementById('wh').value || '-';
+      const jenis = document.getElementById('jenis').value || '-';
+      const layanan = document.getElementById('layanan').value || '-';
+      const date = document.getElementById('date').value || '-';
+      const notes = document.getElementById('notes').value || '-';
+
+      const text = `Halo! Saya ingin booking grooming.\nNama: ${name}\nWA: ${phone}\nJenis: ${jenis}\nLayanan: ${layanan}\nTanggal: ${date}\nCatatan: ${notes}`;
+      const url = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(text);
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
